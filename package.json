@@ -6,7 +6,8 @@
         "shell": "firebase functions:shell",
         "start": "npm run shell",
         "deploy": "firebase deploy --only functions",
-        "logs": "firebase functions:log"
+        "logs": "firebase functions:log",
+        "dev": "nodemon -e ts -w ./src -x ts-node src/index.ts"
     },
     "engines": {
         "node": "12"
@@ -15,12 +16,17 @@
     "dependencies": {
         "firebase-admin": "^9.2.0",
         "firebase-functions": "^3.11.0",
-        "mongoose": "^5.10.17"
+        "mongoose": "^5.10.18"
     },
     "devDependencies": {
+        "@types/mongoose": "^5.10.0",
+        "@types/node": "^14.0.27",
         "eslint": "^5.12.0",
         "eslint-plugin-promise": "^4.0.1",
-        "firebase-functions-test": "^0.2.0"
+        "firebase-functions-test": "^0.2.0",
+        "nodemon": "^2.0.6",
+        "ts-node": "^9.0.0",
+        "typescript": "^3.9.7"
     },
     "private": true
 }
